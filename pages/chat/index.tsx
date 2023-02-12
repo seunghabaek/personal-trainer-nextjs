@@ -8,7 +8,7 @@ type Message = {
   message: string;
 };
 
-export const Chat = () => {
+export default function Chat() {
   const [username, setUsername] = useState("");
   const [chosenUsername, setChosenUsername] = useState("");
   const [message, setMessage] = useState("");
@@ -122,4 +122,4 @@ export const Chat = () => {
       </main>
     </div>
   );
-};
+}

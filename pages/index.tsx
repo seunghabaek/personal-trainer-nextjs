@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Inter } from "@next/font/google";
 import { LoginBtn } from "./components/login-btn";
 import { Chat } from "./chat";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +16,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1 className={inter.className}>Personal-Trainer</h1>
-      <Chat />
+      <div>
+        <Link href="/chat">Chat</Link>
+      </div>
       <LoginBtn />
     </>
   );
