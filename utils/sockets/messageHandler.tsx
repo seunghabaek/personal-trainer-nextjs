@@ -1,4 +1,4 @@
-export default (io, socket) => {
+export const messageHandler = (io, socket) => {
   const createdMessage = (msg) => {
     socket.broadcast.emit("newIncomingMessage", msg);
   };

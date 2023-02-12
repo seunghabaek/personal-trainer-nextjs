@@ -1,7 +1,7 @@
-import messageHandler from "@/utils/sockets/messageHandler";
+import { messageHandler } from "@/utils/sockets/messageHandler";
 import { Server } from "socket.io";
 
-export default function SocketHandler(req, res) {
+export default function SocketHandler(req: any, res: any) {
   if (res.socket.server.io) {
     console.log("Already set up");
     res.end();
@@ -14,6 +14,7 @@ export default function SocketHandler(req, res) {
   const onConnection = (socket) => {
     messageHandler(io, socket);
   };
+
   io.on("connection", onConnection);
 
   console.log("Setting up socket");
