@@ -22,7 +22,7 @@ export const LoginBtn = () => {
         {/* <img src="https://raw.githubusercontent.com/nextauthjs/next-auth/main/packages/next-auth/provider-logos/facebook.svg" /> */}
       </button>
       <button
-        className="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3"
+        className="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3 "
         onClick={() => signIn("facebook")}
       >
         Sign in with Facebook
