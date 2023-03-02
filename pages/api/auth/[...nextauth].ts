@@ -1,10 +1,11 @@
-import NextAuth from "next-auth/next";
 import GoogleProvider from "next-auth/providers/google";
 import FacebookProvider from "next-auth/providers/facebook";
 import KakaoProvider from "next-auth/providers/kakao";
 import NaverProvider from "next-auth/providers/naver";
+import NextAuth from "next-auth/next";
+import { NextAuthOptions } from "next-auth";
 
-export default NextAuth({
+export const authOptions: NextAuthOptions = {
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
@@ -24,7 +25,9 @@ export default NextAuth({
     }),
   ],
   secret: process.env.JWT_SECRET,
-  // pages: {
-  //   signIn: "/login",
-  // },
-});
+  pages: {
+    signIn: "/auth/signin",
+  },
+};
+
+export default NextAuth(authOptions);

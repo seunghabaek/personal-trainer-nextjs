@@ -1,8 +1,12 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
+import { useSession } from "next-auth/react";
 
 const Navbar = () => {
   const [menuToggle, setMenuToggle] = useState(false);
+  const { data: session, status } = useSession();
+
+  if (status === "authenticated") console.log("session", session);
 
   return (
     //   navbar goes here
@@ -25,38 +29,9 @@ const Navbar = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-                <span className="font-bold">Home</span>
+                <span className="font-bold">Personal-Trainer</span>
               </a>
             </div>
-
-            {/* primary nav */}
-            <div className="hidden md:flex items-center space-x-1">
-              <a
-                href="/features"
-                className="py-5 px-3 text-gray-700 hover:text-gray-900"
-              >
-                Features
-              </a>
-              <a
-                href="#"
-                className="py-5 px-3 text-gray-700 hover:text-gray-900"
-              >
-                Pricing
-              </a>
-            </div>
-          </div>
-
-          {/* secondary nav */}
-          <div className="hidden md:flex items-center space-x-1">
-            <a href="#" className="py-5 px-3">
-              Login
-            </a>
-            <a
-              href="#"
-              className="py-2 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-900 hover:text-yellow-800 rounded transition duration-300"
-            >
-              Signup
-            </a>
           </div>
 
           {/* mobile menu */}
@@ -78,13 +53,16 @@ const Navbar = () => {
           href="/features"
           className="block py-2 px-4 text-sm hover:bg-gray-200"
         >
-          Features
+          Calendar
         </a>
         <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">
-          Pricing
+          Workout
         </a>
 
-        <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">
+        <a
+          href="/auth/signin"
+          className="block py-2 px-4 text-sm hover:bg-gray-200"
+        >
           Login
         </a>
         <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">

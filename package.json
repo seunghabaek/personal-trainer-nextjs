@@ -6,7 +6,8 @@
     "dev": "ts-node --project tsconfig.server.json server/server.ts",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "vercel-deploy": "next built && next export"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.16",
