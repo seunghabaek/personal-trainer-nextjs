@@ -1,6 +1,7 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 import { useSession } from "next-auth/react";
+import Link from "next/link";
 
 const Navbar = () => {
   const [menuToggle, setMenuToggle] = useState(false);
@@ -16,7 +17,10 @@ const Navbar = () => {
           <div className="flex space-x-4">
             {/* logo */}
             <div>
-              <a href="/" className="flex items-center py-5 px-2 text-gray-700">
+              <Link
+                href="/"
+                className="flex items-center py-5 px-2 text-gray-700"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 mr-2 text-blue-400"
@@ -30,7 +34,7 @@ const Navbar = () => {
                   />
                 </svg>
                 <span className="font-bold">Personal-Trainer</span>
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -49,25 +53,25 @@ const Navbar = () => {
 
       {/* mobile menu items */}
       <div className={`${!menuToggle ? "hidden" : ""} md:hidden`}>
-        <a
+        <Link
           href="/features"
           className="block py-2 px-4 text-sm hover:bg-gray-200"
         >
           Calendar
-        </a>
-        <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">
+        </Link>
+        <Link href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">
           Workout
-        </a>
+        </Link>
 
-        <a
+        <Link
           href="/auth/signin"
           className="block py-2 px-4 text-sm hover:bg-gray-200"
         >
           Login
-        </a>
-        <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">
+        </Link>
+        <Link href="/" className="block py-2 px-4 text-sm hover:bg-gray-200">
           Signup
-        </a>
+        </Link>
       </div>
     </nav>
   );
