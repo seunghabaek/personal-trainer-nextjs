@@ -1,3 +1,7 @@
+import FullCalendar from "@fullcalendar/react";
+import dayGridPlugin from "@fullcalendar/daygrid";
+import interactionPlugin from "@fullcalendar/interaction";
+import timeGridPlugin from "@fullcalendar/timegrid";
 import Head from "next/head";
 import { Inter } from "@next/font/google";
 import Link from "next/link";

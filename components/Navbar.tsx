@@ -54,12 +54,12 @@ const Navbar = () => {
       {/* mobile menu items */}
       <div className={`${!menuToggle ? "hidden" : ""} md:hidden`}>
         <Link
-          href="/features"
+          href="/calendar"
           className="block py-2 px-4 text-sm hover:bg-gray-200"
         >
           Calendar
         </Link>
-        <Link href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">
+        <Link href="/" className="block py-2 px-4 text-sm hover:bg-gray-200">
           Workout
         </Link>
 
