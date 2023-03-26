@@ -3,6 +3,8 @@ import type { AppProps } from "next/app";
 import { SessionProvider } from "next-auth/react";
 import Layout from "../components/Layout";
 import "@fullcalendar/common/main.css";
+import "../components/BottomNav.css";
+
 // import "@fullcalendar/daygrid/";
 // import "@fullcalendar/timegrid/";
 

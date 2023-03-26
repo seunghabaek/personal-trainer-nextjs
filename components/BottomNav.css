@@ -1,0 +1,35 @@
+.wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 35px;
+}
+
+nav {
+  overflow: hidden;
+}
+
+.nav-link {
+  float: left;
+  width: 20%;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+}
+
+.nav-item {
+  color: grey;
+  /* 이미지 크기 조절 */
+  height: 1.5rem;
+  width: 1.5rem;
+  /* 이미지 중앙배열 */
+  margin: auto;
+}
+
+.active {
+  color: white;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: auto;
+}

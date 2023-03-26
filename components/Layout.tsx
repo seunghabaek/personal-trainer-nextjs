@@ -1,4 +1,5 @@
 // import NavBar from "./Navbar";
+import BottomNav from "./BottomNav";
 import Navbar from "./Navbar";
 
 type Props = {
@@ -8,7 +9,7 @@ type Props = {
 export default function Layout(props: Props) {
   return (
     <div className="w-full py-0">
-      <Navbar />
+      <BottomNav />
       {props.children}
     </div>
   );
