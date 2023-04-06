@@ -33,7 +33,7 @@ const Navbar = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-                <span className="font-bold">Personal-Trainer</span>
+                <span className="font-bold">fit.lender</span>
               </Link>
             </div>
           </div>
@@ -54,13 +54,10 @@ const Navbar = () => {
       {/* mobile menu items */}
       <div className={`${!menuToggle ? "hidden" : ""} md:hidden`}>
         <Link
-          href="/calendar"
+          href="/chat"
           className="block py-2 px-4 text-sm hover:bg-gray-200"
         >
-          Calendar
-        </Link>
-        <Link href="/" className="block py-2 px-4 text-sm hover:bg-gray-200">
-          Workout
+          Chat
         </Link>
 
         <Link

@@ -2,7 +2,6 @@ import { useState } from "react";
 import {
   HomeIcon,
   CalendarDaysIcon,
-  Bars3Icon,
   DocumentTextIcon,
 } from "@heroicons/react/24/solid";
 import { WrenchIcon } from "@heroicons/react/24/outline";
@@ -20,7 +19,6 @@ const BottomNav = () => {
           />
         </div>
       </Link>
-
       <Link
         href="/workout"
         className="nav-link"
@@ -54,7 +52,7 @@ const BottomNav = () => {
           />
         </div>
       </Link>
-      <Link
+      {/* <Link
         href="/entire"
         className="nav-link"
         onClick={() => setActiveIcon(5)}
@@ -64,7 +62,7 @@ const BottomNav = () => {
             className={activeIcon === 5 ? "nav-item active" : "nav-item"}
           />
         </div>
-      </Link>
+      </Link> */}
     </nav>
   );
 };
