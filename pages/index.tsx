@@ -17,10 +17,6 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <h1 className=" text-white text-3xl">Personal-Trainer</h1> */}
-      {/* <div>
-        <Link href="/chat">Chat</Link>
-      </div> */}
     </>
   );
 }

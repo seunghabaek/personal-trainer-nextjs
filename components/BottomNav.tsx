@@ -3,6 +3,7 @@ import {
   HomeIcon,
   CalendarDaysIcon,
   DocumentTextIcon,
+  Bars3Icon,
 } from "@heroicons/react/24/solid";
 import { WrenchIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
@@ -20,49 +21,49 @@ const BottomNav = () => {
         </div>
       </Link>
       <Link
-        href="/workout"
+        href="/calendar"
         className="nav-link"
         onClick={() => setActiveIcon(2)}
       >
         <div>
-          <WrenchIcon
+          <CalendarDaysIcon
             className={activeIcon === 2 ? "nav-item active" : "nav-item"}
           />
         </div>
       </Link>
       <Link
-        href="/calendar"
+        href="/entire"
         className="nav-link"
         onClick={() => setActiveIcon(3)}
       >
         <div>
-          <CalendarDaysIcon
+          <Bars3Icon
             className={activeIcon === 3 ? "nav-item active" : "nav-item"}
+          />
+        </div>
+      </Link>
+      <Link
+        href="/workout"
+        className="nav-link"
+        onClick={() => setActiveIcon(4)}
+      >
+        <div>
+          <WrenchIcon
+            className={activeIcon === 4 ? "nav-item active" : "nav-item"}
           />
         </div>
       </Link>
       <Link
         href="/portfolio"
         className="nav-link"
-        onClick={() => setActiveIcon(4)}
-      >
-        <div>
-          <DocumentTextIcon
-            className={activeIcon === 4 ? "nav-item active" : "nav-item"}
-          />
-        </div>
-      </Link>
-      {/* <Link
-        href="/entire"
-        className="nav-link"
         onClick={() => setActiveIcon(5)}
       >
         <div>
-          <Bars3Icon
+          <DocumentTextIcon
             className={activeIcon === 5 ? "nav-item active" : "nav-item"}
           />
         </div>
-      </Link> */}
+      </Link>
     </nav>
   );
 };
