@@ -1,12 +1,12 @@
 import { useState } from "react";
+import { Bars3Icon } from "@heroicons/react/24/solid";
 import {
+  UserIcon,
   HomeIcon,
-  CalendarDaysIcon,
-  DocumentTextIcon,
-  Bars3Icon,
-} from "@heroicons/react/24/solid";
-import { WrenchIcon } from "@heroicons/react/24/outline";
+  PencilSquareIcon,
+} from "@heroicons/react/24/outline";
 import Link from "next/link";
+import Image from "next/image";
 
 const BottomNav = () => {
   // selected icon color
@@ -26,7 +26,7 @@ const BottomNav = () => {
         onClick={() => setActiveIcon(2)}
       >
         <div>
-          <CalendarDaysIcon
+          <UserIcon
             className={activeIcon === 2 ? "nav-item active" : "nav-item"}
           />
         </div>
@@ -37,7 +37,7 @@ const BottomNav = () => {
         onClick={() => setActiveIcon(3)}
       >
         <div>
-          <Bars3Icon
+          <PencilSquareIcon
             className={activeIcon === 3 ? "nav-item active" : "nav-item"}
           />
         </div>
@@ -48,19 +48,8 @@ const BottomNav = () => {
         onClick={() => setActiveIcon(4)}
       >
         <div>
-          <WrenchIcon
+          <Bars3Icon
             className={activeIcon === 4 ? "nav-item active" : "nav-item"}
-          />
-        </div>
-      </Link>
-      <Link
-        href="/portfolio"
-        className="nav-link"
-        onClick={() => setActiveIcon(5)}
-      >
-        <div>
-          <DocumentTextIcon
-            className={activeIcon === 5 ? "nav-item active" : "nav-item"}
           />
         </div>
       </Link>

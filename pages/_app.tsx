@@ -1,22 +1,29 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { SessionProvider } from "next-auth/react";
-import Layout from "../components/Layout";
+import Layout from "../components/layout/Layout";
 import "@fullcalendar/common/main.css";
-import "../components/BottomNav.css";
+import "../components/layout/BottomNav.css";
+import type { ReactElement, ReactNode } from "react";
+import type { NextPage } from "next";
 
-// import "@fullcalendar/daygrid/";
-// import "@fullcalendar/timegrid/";
+export type NextPageWithLayout = NextPage & {
+  getLayout?: (page: ReactElement) => ReactNode;
+};
+
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout;
+};
 
 export default function App({
   Component,
   pageProps: { session, ...pageProps },
-}: AppProps) {
+}: AppPropsWithLayout) {
+  const getLayout = Component.getLayout ?? ((page) => page);
+
   return (
     <SessionProvider session={session}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      {getLayout(<Component {...pageProps} />)}
     </SessionProvider>
   );
 }

@@ -78,6 +78,9 @@ module.exports = {
         },
       },
     },
+    container: {
+      center: true,
+    },
   },
   variants: {
     extend: {},

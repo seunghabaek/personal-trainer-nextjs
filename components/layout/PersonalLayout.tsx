@@ -9,7 +9,6 @@ type Props = {
 export default function Layout(props: Props) {
   return (
     <div className="w-full py-0">
-      <Navbar />
       <BottomNav />
       {props.children}
     </div>
