@@ -1,8 +1,13 @@
 const WeeklyReserve = () => {
-  let today = new Date();
-  let date = today.getDate();
+  const today = new Date();
+
+  const numberOffset = [-3, -2, -1, 0, 1, 2, 3];
+  const dateOffsetArray = numberOffset.map(
+    (dateOffset) => new Date(new Date().setDate(today.getDate() + dateOffset))
+  );
+
   const weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  let week = weekday[today.getDay()];
+  const weekArray = dateOffsetArray.map((date) => weekday[date.getDay()]);
 
   return (
     <div
@@ -15,70 +20,70 @@ const WeeklyReserve = () => {
           <div className="container mx-auto w-[53px] h-[79px] rounded-2xl">
             <div className="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative gap-0.5 px-3 top-4">
               <p className="flex-grow-0 flex-shrink-0 w-6 h-6 text-lg font-semibold text-center text-slate-800">
-                <h1>{date}</h1>
+                <h1>{dateOffsetArray[0].getDate()}</h1>
               </p>
               <p className="flex-grow-0 flex-shrink-0 w-6 h-3.5 text-xs text-center text-slate-400">
-                {week}
+                {weekArray[0]}
               </p>
             </div>
           </div>
           <div className="container mx-auto w-[53px] h-[79px] rounded-2xl">
             <div className="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative gap-0.5 px-3 top-4">
               <p className="flex-grow-0 flex-shrink-0 w-6 h-6 text-lg font-semibold text-center text-slate-800">
-                <h1>{date}</h1>
+                <h1>{dateOffsetArray[1].getDate()}</h1>
               </p>
               <p className="flex-grow-0 flex-shrink-0 w-6 h-3.5 text-xs text-center text-slate-400">
-                {week}
+                {weekArray[1]}
               </p>
             </div>
           </div>
           <div className="container mx-auto w-[53px] h-[79px] rounded-2xl ">
             <div className="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative gap-0.5 px-3 top-4">
               <p className="flex-grow-0 flex-shrink-0 w-6 h-6 text-lg font-semibold text-center text-slate-800">
-                <h1>{date}</h1>
+                <h1>{dateOffsetArray[2].getDate()}</h1>
               </p>
               <p className="flex-grow-0 flex-shrink-0 w-6 h-3.5 text-xs text-center text-slate-400">
-                {week}
+                {weekArray[2]}
               </p>
             </div>
           </div>
           <div className="container mx-auto w-[53px] h-[79px] rounded-2xl bg-[#0168ff]/[0.06]">
             <div className="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative gap-0.5 px-3 top-4">
               <p className="flex-grow-0 flex-shrink-0 w-6 h-6 text-xl font-bold text-center text-[#0168ff]">
-                <h1>{date}</h1>
+                <h1>{dateOffsetArray[3].getDate()}</h1>
               </p>
               <p className="flex-grow-0 flex-shrink-0 w-6 h-3.5 text-sm font-medium text-center text-[#0168ff]">
-                {week}
+                {weekArray[3]}
               </p>
             </div>
           </div>
           <div className="container mx-auto w-[53px] h-[79px] rounded-2xl">
             <div className="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative gap-0.5 px-3 top-4">
               <p className="flex-grow-0 flex-shrink-0 w-6 h-6 text-lg font-semibold text-center text-slate-800">
-                <h1>{date}</h1>
+                <h1>{dateOffsetArray[4].getDate()}</h1>
               </p>
               <p className="flex-grow-0 flex-shrink-0 w-6 h-3.5 text-xs text-center text-slate-400">
-                {week}
+                {weekArray[4]}
               </p>
             </div>
           </div>
           <div className="container mx-auto w-[53px] h-[79px] rounded-2xl">
             <div className="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative gap-0.5 px-3 top-4">
               <p className="flex-grow-0 flex-shrink-0 w-6 h-6 text-lg font-semibold text-center text-slate-800">
-                <h1>{date}</h1>
+                <h1>{dateOffsetArray[5].getDate()}</h1>
               </p>
               <p className="flex-grow-0 flex-shrink-0 w-6 h-3.5 text-xs text-center text-slate-400">
-                {week}
+                {weekArray[5]}
               </p>
             </div>
           </div>
           <div className="container mx-auto w-[53px] h-[79px] rounded-2xl">
             <div className="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative gap-0.5 px-3 top-4">
               <p className="flex-grow-0 flex-shrink-0 w-6 h-6 text-lg font-semibold text-center text-slate-800">
-                <h1>{date}</h1>
+                <h1>{dateOffsetArray[6].getDate()}</h1>
               </p>
               <p className="flex-grow-0 flex-shrink-0 w-6 h-3.5 text-xs text-center text-slate-400">
-                {week}
+                {weekArray[6]}
               </p>
             </div>
           </div>
