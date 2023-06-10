@@ -1,5 +1,4 @@
-import type { ReactElement } from "react";
-import Layout from "@/components/layout/Layout";
+import { ReactElement } from "react";
 import PersonalLayout from "@/components/layout/PersonalLayout";
 import type { NextPageWithLayout } from "../_app";
 import WeeklyReserve from "../../components/WeeklyReserve";
