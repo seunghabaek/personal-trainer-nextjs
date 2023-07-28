@@ -1,5 +1,5 @@
 import { Button } from "antd";
 
 export const LoginButton = () => {
-  return <Button>test</Button>;
+  return <Button>test2</Button>;
 };
