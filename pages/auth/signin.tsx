@@ -7,6 +7,7 @@ import { getServerSession } from "next-auth/next";
 import authOptions from "../api/auth/[...nextauth]";
 import Image from "next/image";
 import { Button } from "@mui/material";
+import { LoginButton } from "@/components/loginButton";
 
 const SignIn = ({
   providers,
@@ -25,13 +26,14 @@ const SignIn = ({
             <span className="text-[43px] font-bold text-center text-[#101828]">
               lendar
             </span>
-            
           </p>
           <p className=" text-center w-[294px] text-lg text-center text-[#101828]">
-              오늘도 핏랜더와 힘차게 오운완
-            </p>
+            오늘도 핏랜더와 힘차게 오운완
+          </p>
         </div>
       </div>
+      <LoginButton />
+      <Button>test</Button>
       <Button
         onClick={() => signIn("kakao")}
         className="container mx-auto relative top-20 w-[337px] h-[50px] rounded-[21px] bg-[#e9cd00] border border-[#e9cd00]"
@@ -68,6 +70,7 @@ const SignIn = ({
           페이스북으로 로그인
         </p>
       </Button>
+
       <div className="container mx-auto w-[375px] h-[284] ">
         <div className="container mx-auto relative top-20 w-[211px] h-[31px] text-black ">
           <div className="flex px-10 w-[202px] h-[4 6px] relative top-5 gap-2"></div>
